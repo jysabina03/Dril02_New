@@ -15,26 +15,29 @@ character.draw_now(400,90)
 
 
 def run_circle():
-    cx,cy,r=400,300,200
-    for deg in range(0,360,5):
+    
+    cx,cy,r=400, 300, 200
+    for deg in range(0, 360, 5):
         x=cx+r*math.cos(math.radians(deg))
         y=cy+r*math.sin(math.radians(deg))
         clear_canvas_now()
-        grass.draw_now(400,30)
-        character.draw_now(x,y)
+        grass.draw_now(400, 30)
+        character.draw_now(x, y)
 
         delay(0.1)
-    pass
-
+        
 
 def run_rect():
-    pass
 
-
-
+    for x in range(50,750+1,5):
+        clear_canvas_now()
+        grass.draw_now(400, 30)
+        character.draw_now(x, 90)
+        delay(0.1)
+    
 
 while True:
-    run_circle()
+    #run_circle()
     run_rect()
     break
 
