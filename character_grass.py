@@ -21,7 +21,7 @@ def run_circle():
         y=r*math.sin(math.radians(deg))
         clear_canvas_now()
         grass.draw_now(400,30)
-        character.draw_now(x+400,y+300)
+        character.draw_now(x,y)
 
         delay(0.1)
     pass
