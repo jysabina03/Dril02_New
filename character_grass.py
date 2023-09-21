@@ -18,7 +18,7 @@ def rander_frame(x, y):
 def run_circle():
     
     cx,cy,r=400, 300, 200
-    for deg in range(0, 360, 5):
+    for deg in range(-90, 270, 5):
         x=cx+r*math.cos(math.radians(deg))
         y=cy+r*math.sin(math.radians(deg))
         rander_frame(x, y)
@@ -26,26 +26,29 @@ def run_circle():
 
 def run_rect():
 
-    #아래
-    for x in range(50,750+1,10):
+    #아래 1
+    for x in range(400,750,10):
         rander_frame(x,90) #x, y 위치에 캐릭터 그림
 
     #오른쪽
-    for y in range(90,550+1,10):
-        rander_frame(750,y) #x, y
+    for y in range(90,550,10):
+        rander_frame(750,y)
         
     #위
-    for x in range(750,50-1,-10):
+    for x in range(750,50,-10):
         rander_frame(x,550)
     
     #왼쪽
-    for y in range(550,90-1,-10):
-        rander_frame(50,y) #x, y
+    for y in range(550,90,-10):
+        rander_frame(50,y)
+        
+    #아래 2
+    for x in range(50,400+1,10):
+        rander_frame(x,90)
         
 while True:
-    #run_circle()
+    run_circle()
     run_rect()
-    break
 
 
 
