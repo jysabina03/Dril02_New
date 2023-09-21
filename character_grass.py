@@ -26,12 +26,17 @@ def run_circle():
 
 def run_rect():
 
-    for x in range(50,750+1,5):
+    #아래
+    for x in range(50,750+1,10):
         rander_frame(x,90) #x, y 위치에 캐릭터 그림
+
+    #위
+    for x in range(750,50-1,-10):
+        rander_frame(x,550)
     
 
 while True:
-    run_circle()
+    #run_circle()
     run_rect()
     break
 
